@@ -14,9 +14,8 @@ public class CharacterController : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
     }
-	
-
-	void Update ()
+    
+    void Update ()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -24,6 +23,5 @@ public class CharacterController : MonoBehaviour
         movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rigid.AddForce(movement * speed * Time.deltaTime);
-
     }
 }
